@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RegForm from './components/RegForm';
+import ChatPage from './components/ChatPage';
+
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
-   <h2>Hello world!</h2>
+    <div className="App">
+      <ChatPage />
+      {/* {isAuthenticated ? (
+        <ChatPage />
+      ) : (
+        <RegForm onLogin={() => setIsAuthenticated(true)} />
+      )} */}
+    </div>
   );
 }
 
