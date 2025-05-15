@@ -10,12 +10,11 @@ function App() {
 
   return (
     <div className="App">
-      <ChatPage />
-      {/* {isAuthenticated ? (
+      {isAuthenticated ? (
         <ChatPage />
       ) : (
         <RegForm onLogin={() => setIsAuthenticated(true)} />
-      )} */}
+      )}
     </div>
   );
 }
